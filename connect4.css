@@ -1,0 +1,34 @@
+body{
+    font-family: Arial, Helvetica, sans-serif; /* First choice is Ariel, if doesn't work default to Helvetica, or sans-serif */
+    text-align: center;
+}
+
+#grid{ /*the board is 7 (long) by 6 (wide) */
+    height: 600px;
+    width: 700px;
+
+    background-color: rgb(30, 30, 240);
+    border: 10px solid rgb(36, 5, 122);
+
+    margin: 0 auto; /*vertically centers grid*/
+    display: flex;
+    flex-wrap: wrap; /* allows grid to text wrap into next lines*/
+
+}
+
+.tile{
+    height: 76px;
+    width: 76px;
+
+    background-color: white;
+    border-radius: 50%;
+    margin: 6px;
+    border: 6px solid rgb(36, 5, 122);
+}
+
+.p1Piece{
+    background-color: red;
+}
+.p2Piece{
+    background-color: yellow;
+}
