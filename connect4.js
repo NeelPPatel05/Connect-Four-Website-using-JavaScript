@@ -49,18 +49,24 @@ function place(row, col){
     
     if (grid[row][col] == 0) {
         grid[row][col] = curPlayer;
-        checkWin();
+        
         console.log(grid[row][col]);
         let tile = document.getElementById(row.toString() + "," + col.toString());
         
         if (curPlayer == 1) {
             tile.classList.add("p1Piece");
+            checkWin();
+            
             curPlayer = 2;
         } else {
             tile.classList.add("p2Piece");
+            checkWin();
+            
             curPlayer = 1;
         }
+
     }
+    
 
 }
 function checkWin(){
@@ -121,7 +127,7 @@ function checkWin(){
     if (gameEnd)
     {
         let winner = document.getElementById("winnerText")
-        if(curPlayer=1)
+        if(curPlayer==1)
         {
             winner.innerText = "Red Wins";
         }
